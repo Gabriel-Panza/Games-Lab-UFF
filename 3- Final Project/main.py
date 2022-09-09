@@ -20,8 +20,6 @@ import Player
 import enemy
 import shooting
 import EndOfGame
-import pygame
-from pygame import mixer
 
 ################################################################################################################################
 ################################################ Inicializações / Start() ######################################################
@@ -342,7 +340,7 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
         
         # Volto pro menu
         if (teclado.key_pressed("ESC")):
-            mixer.music.stop()
+            pygame.mixer.music.stop()
             menu.menu()
         
         # Desenho o cenario desejado e a placa que indica o que precisa ser feito
@@ -354,9 +352,9 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
             
             # Inicio a musica de batalha
             if musica==0:
-                mixer.music.load("Music/ForestBattle.wav")
-                mixer.music.set_volume(0.3)
-                mixer.music.play(-1)
+                pygame.mixer.music.load("Music/ForestBattle.wav")
+                pygame.mixer.music.set_volume(0.3)
+                pygame.mixer.music.play(-1)
                 musica+=1
             
             # Crio a movimentacao do minotauro
@@ -406,7 +404,7 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
                 cenario+=1
                 player.set_position(0,janela.height-player.height)
                 summon=False
-                mixer.music.stop()
+                pygame.mixer.music.stop()
         
         elif cenario==2:
             cenarioCastelo.draw()
@@ -416,9 +414,9 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
             
             # Inicio a musica de batalha
             if musica==1:
-                mixer.music.load("Music/CastleBattle.wav")
-                mixer.music.set_volume(0.3)
-                mixer.music.play(-1)
+                pygame.mixer.music.load("Music/CastleBattle.wav")
+                pygame.mixer.music.set_volume(0.3)
+                pygame.mixer.music.play(-1)
                 musica+=1
             
             # Crio a movimentacao do guarda
@@ -489,7 +487,7 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
                     clone=0
                     cenario+=1
                     player.set_position(0,janela.height/2)
-                    mixer.music.stop()     
+                    pygame.mixer.music.stop()     
 
         
         elif cenario==3:
@@ -502,9 +500,9 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
             
             # Inicio a musica de batalha
             if musica==2:
-                mixer.music.load("Music/FinalBattle.wav")
-                mixer.music.set_volume(0.3)
-                mixer.music.play(-1)
+                pygame.mixer.music.load("Music/FinalBattle.wav")
+                pygame.mixer.music.set_volume(0.3)
+                pygame.mixer.music.play(-1)
                 musica+=1
             
             # Crio a movimentacao do Caebralum
@@ -558,9 +556,9 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
             
             # Crio o latido do Boss
             if delayRugido==0:
-                rugido = mixer.Sound("Music/Rugido.wav")
+                rugido = pygame.mixer.Sound("Music/Rugido.wav")
                 rugido.set_volume(0.1)
-                mixer.find_channel().play(rugido)
+                pygame.mixer.find_channel().play(rugido)
                 delayRugido=600
         
         # Checo o tempo de invencibilidade apos sofrer dano
