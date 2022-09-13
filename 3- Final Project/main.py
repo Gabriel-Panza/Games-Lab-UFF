@@ -106,7 +106,7 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
     player_Clone_Dir.x = 0
     player_Clone_Dir.y = janela.height-player_Clone_Dir.height
 
-    player_Dash_Dir=Sprite("Images/Emih_Dash.png", 1)
+    player_Dash_Dir = Sprite("Images/Emih_Dash.png", 1)
     player_Dash_Dir.x = 0
     player_Dash_Dir.y = janela.height-player_Dash_Dir.height
 

@@ -3,7 +3,7 @@ from PPlay.gameimage import *
 from PPlay.sprite import *
 from PPlay.collision import *
 from PPlay.keyboard import *
-import pygame, time
+import time
 
 ################################################################################################################################
 ################################################ Inicializações / Start() ######################################################
