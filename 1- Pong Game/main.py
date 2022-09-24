@@ -3,7 +3,6 @@ from PPlay.gameimage import *
 from PPlay.sprite import *
 from PPlay.collision import *
 from PPlay.keyboard import *
-import time
 
 ################################################################################################################################
 ################################################ Inicializações / Start() ######################################################
@@ -107,9 +106,13 @@ while(True):
         pontDireito+=1
 
     # Colisão da bola com o pad
-    if bola.collided(padE) or bola.collided(padD):
+    if bola.collided(padE):
+        bola.x += 1
         vBola_x *= -1
-
+    if bola.collided(padD):
+        bola.x -= 1
+        vBola_x *= -1
+        
     # Finaliza o programa ao alcançar certa pontuação
     if pontEsquerdo>=5 or pontDireito>=5:
         time.sleep(1)
