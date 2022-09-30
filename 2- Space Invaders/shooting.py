@@ -5,7 +5,7 @@ import random
 
 def criaProjNave(player,listaProjeteis):
     # Crio o projetil
-    projetil = Sprite("projetil.png",1)
+    projetil = Sprite("Image/projetil.png",1)
     projetil.x = player.x + 50
     projetil.y = player.y - projetil.height
     listaProjeteis.append(projetil)
@@ -19,7 +19,7 @@ def tiroPlayer(janela,listaProjeteis,velProjetil):
 
 def criaProjInimigo(inimigo,listaProjeteisInimigos):
     # Crio o projetil
-    projetilInimigo = Sprite("projetil2.png",1)
+    projetilInimigo = Sprite("Image/projetil2.png",1)
     projetilInimigo.x = inimigo[0].x + 50
     projetilInimigo.y = inimigo[0].y + projetilInimigo.height + 50
     if (random.random() < 0.3 and len(listaProjeteisInimigos)==0):

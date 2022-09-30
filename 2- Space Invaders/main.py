@@ -9,7 +9,6 @@ import Player
 import enemy
 import ranking
 import shooting
-import pygame
 from pygame import mixer
 
 ################################################################################################################################
@@ -23,16 +22,16 @@ def game(vidas,movimento,movimentoInimigo,velProjetil,velProjetilInimigo,delay,d
     teclado = janela.get_keyboard()
 
     # Instancio os objetos do jogo
-    espaco = GameImage("espaço.jpg")
-    player = Sprite("nave.png",1)
-    playerInvencible = Sprite("naveInvencivel.png",1)
+    espaco = GameImage("Image/espaço.jpg")
+    player = Sprite("Image/nave.png",1)
+    playerInvencible = Sprite("Image/naveInvencivel.png",1)
     
     # Defino a posiçao do player
     player.x = janela.width/2
     player.y = janela.height - player.height - 20
     
     # Instancio o som do jogo
-    mixer.music.load("Megalovania.wav")
+    mixer.music.load("Music/Megalovania.wav")
     mixer.music.set_volume(0.4)
     mixer.music.play(-1)
        

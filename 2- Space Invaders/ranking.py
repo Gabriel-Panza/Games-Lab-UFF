@@ -11,7 +11,7 @@ def rank():
 
     teclado = janela.get_keyboard()
 
-    espaco = GameImage("espaço.jpg")
+    espaco = GameImage("Image/espaço.jpg")
 
     # Organizo o arquivo txt em ordem decrescente
     pontuacao = sorting('Pontuacao.txt')
@@ -52,12 +52,12 @@ def fimDoJogoDerrota(score):
     
     teclado = janela.get_keyboard()
     
-    espaco = GameImage("espaço.jpg")
+    espaco = GameImage("Image/espaço.jpg")
     
     nome = input("Entre com o seu nome: ")
     
     # Instancio o som da Derrota
-    mixer.music.load("NarutoSadThemeFlute.wav")
+    mixer.music.load("Music/NarutoSadThemeFlute.wav")
     mixer.music.set_volume(0.4)
     mixer.music.play(-1)
     

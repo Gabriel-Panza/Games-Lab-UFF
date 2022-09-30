@@ -13,38 +13,38 @@ def spawn(linha,matrizDeInimigos):
         for j in range(10):
             if linha<6:
                 if i==0:
-                    inimigoAtras = Sprite("inimigo3.png",1)
+                    inimigoAtras = Sprite("Image/inimigo3.png",1)
                     inimigoAtras.x = 75 * j
                     inimigoAtras.y = 50 * i
                     linhas.append((inimigoAtras,1))
                 elif i==linha-1:
-                    inimigoFrente = Sprite("inimigo1.png",1)
+                    inimigoFrente = Sprite("Image/inimigo1.png",1)
                     inimigoFrente.x = 75 * j
                     inimigoFrente.y = 50 * i
                     linhas.append((inimigoFrente,1))
                 else:
-                    inimigoMeio = Sprite("inimigo2.png",1)
+                    inimigoMeio = Sprite("Image/inimigo2.png",1)
                     inimigoMeio.x = 75 * j
                     inimigoMeio.y = 50 * i
                     linhas.append((inimigoMeio,1))
             if linha>=6:
                 if i==0:
-                    inimigoAtras = Sprite("inimigo3.png",1)
+                    inimigoAtras = Sprite("Image/inimigo3.png",1)
                     inimigoAtras.x = 75 * j
                     inimigoAtras.y = 50 * i
                     linhas.append((inimigoAtras,1))
                 elif i==linha-2:
-                    inimigoFrente = Sprite("inimigo1.png",1)
+                    inimigoFrente = Sprite("Image/inimigo1.png",1)
                     inimigoFrente.x = 75 * j
                     inimigoFrente.y = 50 * i
                     linhas.append((inimigoFrente,1))
                 elif i==linha-1:
-                    inimigoBonus = Sprite("inimigoBonus.png",1)
+                    inimigoBonus = Sprite("Image/inimigoBonus.png",1)
                     inimigoBonus.x = 50
                     inimigoBonus.y = 50
                     break
                 else:
-                    inimigoMeio = Sprite("inimigo2.png",1)
+                    inimigoMeio = Sprite("Image/inimigo2.png",1)
                     inimigoMeio.x = 75 * j
                     inimigoMeio.y = 50 * i
                     linhas.append((inimigoMeio,1))
@@ -52,7 +52,7 @@ def spawn(linha,matrizDeInimigos):
     
     i = random.randint(0,linha-1)
     j = random.randint(0,9)
-    matrizDeInimigos[i][j] = (Sprite("inimigoBoss.png",1),3)
+    matrizDeInimigos[i][j] = (Sprite("Image/inimigoBoss.png",1),3)
     matrizDeInimigos[i][j][0].x = 75 * j
     matrizDeInimigos[i][j][0].y = 50 * i
     
