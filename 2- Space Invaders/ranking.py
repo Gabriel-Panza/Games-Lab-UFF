@@ -14,8 +14,9 @@ def rank():
     espaco = GameImage("Image/espaço.jpg")
 
     # Organizo o arquivo txt em ordem decrescente
-    pontuacao = sorting('Pontuacao.txt')
+    pontuacao = translate('Pontuacao.txt')
     pontuacao.reverse()
+    
     # Desenho o fundo
     espaco.draw()
     
@@ -93,7 +94,7 @@ def fimDoJogoDerrota(score):
         # Atualizo o GameLoop
         janela.update()
         
-def sorting(file):
+def translate(file):
     arquivo = open(file)
     pontuacao = []
     for elemento in arquivo:

@@ -1,4 +1,3 @@
-from turtle import delay
 from PPlay.window import*
 from PPlay.animation import*
 from PPlay.sprite import*
@@ -6,7 +5,6 @@ from PPlay.gameimage import*
 from PPlay.gameobject import*
 from PPlay.collision import*
 from PPlay.keyboard import*
-import Player
 
 def SetPlayer(PlayerState,playerAtual):
     player = PlayerState

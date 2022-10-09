@@ -1,6 +1,5 @@
 from PPlay.sprite import*
 from PPlay.collision import*
-import pygame
 import random
 
 def criaProjNave(player,listaProjeteis):
