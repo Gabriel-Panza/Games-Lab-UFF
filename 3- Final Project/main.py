@@ -38,7 +38,7 @@ def game(vidas,vidasInimigo,movimento,movimentoInimigo,velProjetil,velProjetilIn
     # Adiciono a variavel q trocará de musica
     musica=0
     
-    # Instancio os cenários
+    # Instancio os cenários 
     cenarioFloresta = GameImage("Images/Floresta.jpg")
     chaoFloresta = Sprite("Images/FlorestaChao.png",1)
     chaoFloresta.y = janela.height-chaoFloresta.height
