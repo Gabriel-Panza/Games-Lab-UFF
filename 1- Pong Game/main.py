@@ -37,6 +37,7 @@ vPadD = 500
 
 # Defino o tempo inicial pro deltaTime
 tempoInicial = time.time()
+frames=0
 
 # Defino a pontuação inicial
 pontEsquerdo = 0
@@ -50,7 +51,14 @@ while(True):
     tempoAtual = time.time()
     deltaTime = tempoAtual - tempoInicial
     tempoInicial = tempoAtual
-        
+    
+    # Gero o framerate a ser desenhado
+    if frames==0:
+        frames=300
+        framerate = deltaTime  
+    if frames>0:
+        frames-=1
+          
     # Inicio o jogo com a bola parada no meio
     if ((bola.x == janela.width/2 - bola.width/2) and (teclado.key_pressed("space"))):
         vBola_x = 800
@@ -136,7 +144,7 @@ while(True):
     
     # Fps
     janela.draw_text(("FPS: "), 0, 0, size=24, font_name="Arial", bold=True,color=[0, 0, 0])
-    janela.draw_text(str(int(deltaTime*100000)), 65, 0, size=24, font_name="Arial", bold=True,color=[0, 0, 0])
+    janela.draw_text(str(int(framerate*100000)), 65, 0, size=24, font_name="Arial", bold=True,color=[0, 0, 0])
 
     #Finaliza o Gameloop
     janela.update()
