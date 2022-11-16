@@ -15,10 +15,10 @@ janela = Window(1280,720)
 teclado = janela.get_keyboard()
 
 # Instancio as imagens q serão sobrepostas na minha janela
-fundo = GameImage("Stadium.jpg")
-bola = Sprite("bola.png",1)
-padE = Sprite("padE.png",1)
-padD = Sprite("padD.png",1)
+fundo = GameImage("sprites/Stadium.jpg")
+bola = Sprite("sprites/bola.png",1)
+padE = Sprite("sprites/padE.png",1)
+padD = Sprite("sprites/padD.png",1)
 
 # Instancio a posição inicial da bola para que ela fique no centro da tela
 bola.x = janela.width/2 - bola.width/2
