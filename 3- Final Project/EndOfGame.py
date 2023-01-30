@@ -1,8 +1,7 @@
 from PPlay.window import*
 from PPlay.keyboard import*
 from PPlay.sound import*
-import pygame
-from pygame import mixer
+import menu
 
 def vitoria():
     # Instancio o tamanho da janela
@@ -12,15 +11,14 @@ def vitoria():
     teclado = janela.get_keyboard()
     
     # Adiciono musica
-    mixer.music.load("Music/VictoryThemeSoundtrack.wav")
-    mixer.music.set_volume(0.4)
-    mixer.music.play(-1)
+    pygame.mixer.music.load("Music/VictoryThemeSoundtrack.wav")
+    pygame.mixer.music.set_volume(0.4)
+    pygame.mixer.music.play(-1)
     
     while True:
         # Volto pro menu
         if (teclado.key_pressed("ESC")):
-            mixer.music.stop()
-            import menu
+            pygame.mixer.music.stop()
             menu.menu()
         
         # Desenho os textos finais
@@ -43,15 +41,14 @@ def derrota():
     teclado = janela.get_keyboard()
     
     # Adiciono musica
-    mixer.music.load("Music/DefeatThemeSoundtrack.wav")
-    mixer.music.set_volume(0.4)
-    mixer.music.play(-1)
+    pygame.mixer.music.load("Music/DefeatThemeSoundtrack.wav")
+    pygame.mixer.music.set_volume(0.4)
+    pygame.mixer.music.play(-1)
     
     while True:
         # Volto pro menu
         if (teclado.key_pressed("ESC")):
-            mixer.music.stop()
-            import menu
+            pygame.mixer.music.stop()
             menu.menu()
         
         # Desenho os textos finais

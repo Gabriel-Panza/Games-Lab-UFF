@@ -2,7 +2,8 @@ from PPlay.window import *
 from PPlay.mouse import *
 from PPlay.sprite import *
 from PPlay.sound import *
-import main
+import game
+import menu
 
 def instrucao(movimentoInimigo):
     # Instancio a janela
@@ -21,16 +22,15 @@ def instrucao(movimentoInimigo):
     while True:
         # Volto pro menu
         if (teclado.key_pressed("ESC")):
-            import menu
             menu.menu()
             
         if(mouseClick.is_button_pressed(1) and mouseClick.is_over_object(playButton)):
             if(movimentoInimigo==200):
-                main.game(vidas=5,vidasInimigo=3,movimento=250,movimentoInimigo=movimentoInimigo,velProjetil=600,velProjetilInimigo=300,delay=0,delayInimigo=100)
+                game.game(vidas=5,vidasInimigo=3,movimento=250,movimentoInimigo=movimentoInimigo,velProjetil=600,velProjetilInimigo=300,delay=0,delayInimigo=100)
             elif(movimentoInimigo==250):
-                main.game(vidas=5,vidasInimigo=5,movimento=250,movimentoInimigo=movimentoInimigo,velProjetil=600,velProjetilInimigo=300,delay=0,delayInimigo=100)
+                game.game(vidas=5,vidasInimigo=5,movimento=250,movimentoInimigo=movimentoInimigo,velProjetil=600,velProjetilInimigo=300,delay=0,delayInimigo=100)
             elif(movimentoInimigo==300):
-                main.game(vidas=3,vidasInimigo=5,movimento=250,movimentoInimigo=movimentoInimigo,velProjetil=600,velProjetilInimigo=300,delay=0,delayInimigo=100)
+                game.game(vidas=3,vidasInimigo=5,movimento=250,movimentoInimigo=movimentoInimigo,velProjetil=600,velProjetilInimigo=300,delay=0,delayInimigo=100)
         # Desenho o fundo
         janela.set_background_color([0,0,0])
 
