@@ -144,7 +144,7 @@ while(True):
     
     # Fps
     janela.draw_text(("FPS: "), 0, 0, size=24, font_name="Arial", bold=True,color=[0, 0, 0])
-    janela.draw_text(str(int(framerate*100000)), 65, 0, size=24, font_name="Arial", bold=True,color=[0, 0, 0])
+    janela.draw_text(str(int(framerate*10000)), 65, 0, size=24, font_name="Arial", bold=True,color=[0, 0, 0])
 
     #Finaliza o Gameloop
     janela.update()
