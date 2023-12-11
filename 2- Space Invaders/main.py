@@ -34,6 +34,9 @@ def game(vidas,movimento,movimentoInimigo,velProjetil,velProjetilInimigo,delay,d
     mixer.music.load("Music/Megalovania.wav")
     mixer.music.set_volume(0.4)
     mixer.music.play(-1)
+    
+    sound_effect_1 = pygame.mixer.Channel(0)
+    sound_effect_1.play()
        
     # Defino o frame per second
     FPS = 60
