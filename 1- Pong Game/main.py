@@ -85,16 +85,16 @@ while(True):
     bola.y += vBola_y * deltaTime
     
     # Adiciono os inputs do teclado e a AI no programa
+    if (teclado.key_pressed("w")) and (padE.y>0):
+        padE.y -= vPadE * deltaTime
+    if (teclado.key_pressed("s")) and (padE.y <= janela.height - padE.height):
+        padE.y += vPadE * deltaTime
+        
     if (padD.y > bola.y and abs(padD.y - bola.y) > 10) and (padD.y>0): 
         padD.y -= vPadD * deltaTime
     if (padD.y < bola.y and abs(padD.y - bola.y) > 10) and (padD.y <= janela.height - padE.height):
         padD.y += vPadD * deltaTime
         
-    if (teclado.key_pressed("w")) and (padE.y>0):
-        padE.y -= vPadE * deltaTime
-    if (teclado.key_pressed("s")) and (padE.y <= janela.height - padE.height):
-        padE.y += vPadE * deltaTime
-
     # Colisão da bola com a janela
     if (bola.y < -5) or (bola.y + bola.height > janela.height+5):
         vBola_y *= -1
@@ -128,9 +128,6 @@ while(True):
     
     # Define um titulo pra janela
     janela.set_title("PokePong")
-    
-    # Pinto o fundo da tela de uma cor diferente
-    janela.set_background_color([0,0,100])
     
     # Chamo/Desenho as imagens instanciadas no começo
     fundo.draw()
