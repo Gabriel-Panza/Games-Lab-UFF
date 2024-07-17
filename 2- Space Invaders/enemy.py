@@ -88,7 +88,7 @@ def killNavemae(listaProjeteis,score,naveMae):
             score+=100
     return score
 
-def hit(vidas,player,listaDeInimigos,listaProjeteisInimigos,listaProjeteisNavemae,score):
+def hit(vidas,player,listaProjeteisInimigos,listaProjeteisNavemae):
     for i,projetil in enumerate(listaProjeteisInimigos):
         if (projetil.collided(player)):
             listaProjeteisInimigos.pop(i)
