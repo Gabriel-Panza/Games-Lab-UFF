@@ -109,15 +109,11 @@ def sair():
     naoButton = Sprite("Image/nao.png", 1)
 
     while (True):
-        if(teclado.key_pressed("ESC")):
-            MainMenu()
-        
         janela.draw_text(("DESEJA MESMO SAIR?"), (janela.width / 2)-275, 150, size=48, font_name="Arial", bold=True,color=[255, 255, 255])
         if(mouseClick.is_button_pressed(1) and mouseClick.is_over_object(simButton)):
             janela.close()
         if((mouseClick.is_button_pressed(1) and mouseClick.is_over_object(naoButton)) or (teclado.key_pressed("ESC"))):
-            import menu
-            menu.MainMenu()
+            MainMenu()
         
         simButton.set_position((janela.width/2) -300, (janela.height/2)+100)
         naoButton.set_position((janela.width/2) +100, (janela.height/2)+100)
